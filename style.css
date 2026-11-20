@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 200vh;
+    background: #0D1117;
+}
+.Navbar {
+    top: 5vh;
+    width: 3vw;
+    left: 0.4vw;
+    height: 90vh;
+    position: sticky;
+    border: 1px solid #3D444D;
+    border-radius: 10px 0 0 10px;
+}
+.Btn {
+    width: 2vw;
+    margin: 0.5vw;
+}
+.Btn:hover {
+    background: #171B22;
+    border-radius: 30%;
+    border: 0.25vw solid #171B22;
+    margin: 0.25vw;
+}
