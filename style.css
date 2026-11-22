@@ -6,8 +6,8 @@ body {
 }
 .Navbar {
     top: 5vh;
-    width: 3vw;
-    left: 0.4vw;
+    width: 50px;
+    left: 5px;
     height: 90vh;
     position: sticky;
     border: 1px solid #3D444D;
