@@ -4,22 +4,93 @@ body {
     height: 200vh;
     background: #0D1117;
 }
+
 .Navbar {
-    top: 5vh;
-    width: 50px;
+    top: 2.5vh;
+    width: 40px;
     left: 5px;
-    height: 90vh;
+    height: 95vh;
     position: sticky;
+    z-index: 100;
+    background: #161B22;
     border: 1px solid #3D444D;
-    border-radius: 10px 0 0 10px;
+    border-radius: 7.5px 0 0 10px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
 }
+
+.NavGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    width: 100%;
+}
+
 .Btn {
-    width: 2vw;
-    margin: 0.5vw;
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+    padding: 3px;
+    box-sizing: border-box;
+    background: transparent;
+    border: 2px solid transparent;
+    border-radius: 30%;
+    color: #8B949E;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.Btn svg {
+    width: 22px;
+    height: 22px;
+    display: block;
+}
+
 .Btn:hover {
     background: #171B22;
-    border-radius: 30%;
-    border: 0.25vw solid #171B22;
-    margin: 0.25vw;
+    border-color: #171B22;
+    color: #F0F6FC;
+}
+
+/* Slide-out Panel */
+.NavDrawer {
+    position: absolute;
+    top: -1px;
+    left: 100%;
+    height: calc(100% + 2px);
+    width: 0;
+    background: #0D1117;
+    border: 1px solid #3D444D;
+    border-left: none;
+    border-radius: 0 10px 10px 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: width 0.2s ease, opacity 0.15s ease;
+}
+
+.Navbar.is-open .NavDrawer {
+    width: 220px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.DrawerPanel {
+    display: none;
+    padding: 12px;
+    color: #F0F6FC;
+    white-space: nowrap;
+}
+
+.DrawerPanel.is-active {
+    display: block;
 }
